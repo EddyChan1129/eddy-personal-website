@@ -33,7 +33,7 @@ const projects = [
 
 const Projects: FC = () => {
   return (
-    <section className="section">
+    <section className="section" id="projects">
       <div className="container">
         <h2 className="text-4xl md:text-7xl lg:text-8xl">Selected works</h2>
         <div className="mt-10 md:mt-16 lg:mt-20">
@@ -50,7 +50,7 @@ const Projects: FC = () => {
                   </div>
                   <div className="mt-8 md:mt-0 flex items-center justify-between">
                     <h3 className="text-2xl md:text-3xl lg:text-4xl">{name}</h3>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
                       <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
                     </svg>
 
