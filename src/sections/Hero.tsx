@@ -32,7 +32,6 @@ const Hero: FC = () => {
         </div>
       </div>
     </section>
-
   )
 };
 
