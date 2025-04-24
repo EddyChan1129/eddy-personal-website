@@ -3,7 +3,7 @@ import { FC } from "react";
 
 const Intro: FC = () => {
   return (
-    <section className="py-24 md:py-32 mt-12 md:mt-16 lg:mt-20">
+    <section className="section mt-12 md:mt-16 lg:mt-20">
       <div className="container">
         <h2 className="text-4xl md:text-7xl lg:w-[80%]">
           I’m Eddy Chan, a Product Designer based in Hong Kong. I specialize in creating user-centered designs that are not only visually appealing but also highly functional.
