@@ -2,7 +2,7 @@
 import { motion, useAnimate } from "framer-motion";
 import Image from "next/image";
 import logo from "@/assets/icons/bars.svg";
-import { FC, useEffect, useState } from "react";
+import { FC, useEffect, useState, MouseEvent } from "react";
 import { Button } from "@/components/Button";
 import { nav } from "motion/react-client";
 
@@ -124,15 +124,11 @@ const Header: FC = () => {
     const hash = url.hash;
     const target = document.querySelector(hash);
 
-    if (!target) {
-      return;
-    }
-
+    if (!target) return;
+  
     target.scrollIntoView({
       behavior: "smooth",
     });
-
-
 
   }
 
