@@ -7,7 +7,6 @@ import { Button } from "@/components/Button";
 import { nav } from "motion/react-client";
 
 
-
 /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
 const navItems = [
   {
@@ -135,7 +134,7 @@ const Header: FC = () => {
 
   return (
     <header>
-      <div className="fixed top-0 left-0 w-full h-0 overflow-hidden bg-stone-900" ref={navScope}>
+      <div className="fixed top-0 left-0 w-full h-0 overflow-hidden bg-stone-900 z-10" ref={navScope}>
         <nav className="mt-20 flex flex-col">
           {navItems.map(({ label, href }) => (
             <a href={href} key={label} className="text-stone-200 border-t border-stone-800 last:border-b py-8 group/nav-item relative isolate"
@@ -154,7 +153,7 @@ const Header: FC = () => {
           ))}
         </nav>
       </div>
-      <div className="fixed top-0 left-0 w-full mix-blend-difference backdrop-blur-md ">
+      <div className="fixed top-0 left-0 w-full mix-blend-difference backdrop-blur-md z-10">
         <nav className="container max-w-full">
           <div className="flex justify-between items-center h-20">
             <div>
@@ -167,7 +166,7 @@ const Header: FC = () => {
           </div>
         </nav>
       </div>
-      <div className="fixed top-0 left-0 w-full ">
+      <div className="fixed top-0 left-0 w-full z-10">
         <nav className="container !max-w-full">
           <div className="flex justify-end items-center h-20">
             <div className="flex items-center gap-4">
