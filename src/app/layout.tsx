@@ -3,7 +3,7 @@ import { Archivo } from "next/font/google";
 import "./globals.css";
 
 
-export const archivo = Archivo({
+const archivo = Archivo({
   display: "swap",
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
