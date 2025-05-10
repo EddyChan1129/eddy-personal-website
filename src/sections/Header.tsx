@@ -126,7 +126,7 @@ const Header: FC = () => {
   return (
     <header>
       <div
-        className="fixed top-0 left-0 w-full h-0 overflow-hidden bg-red-900 z-10"
+        className="fixed top-0 left-0 w-full h-0 overflow-hidden bg-stone-200 z-10"
         ref={navScope}
       >
         <nav className="mt-20 flex flex-col">
@@ -134,7 +134,7 @@ const Header: FC = () => {
             <a
               href={href}
               key={label}
-              className="text-stone-200 border-t border-stone-800 last:border-b py-8 group/nav-item relative isolate"
+              className="text-stone-900 border-t border-stone-800 last:border-b py-8 group/nav-item relative isolate"
               onClick={handleClickMobileItem}
             >
               <div className="container max-w-full flex items-center justify-between">
@@ -157,7 +157,7 @@ const Header: FC = () => {
                 </svg>
               </div>
 
-              <div className="absolute w-full h-0 bg-stone-800 group-hover/nav-item:h-full transition-all duration-500 bottom-0 -z-10"></div>
+              <div className="absolute w-full h-0  group-hover/nav-item:h-full transition-all duration-500 bottom-0 -z-10"></div>
             </a>
           ))}
         </nav>
