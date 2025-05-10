@@ -6,10 +6,14 @@ import downImage from "@/assets/icons/chevron-double-down.svg";
 import { Button } from "@/components/Button";
 import Image from "next/image";
 import SplitType from "split-type";
-import { useAnimate, motion, stagger, useScroll, useTransform } from "motion/react";
+import {
+  useAnimate,
+  motion,
+  stagger,
+  useScroll,
+  useTransform,
+} from "motion/react";
 import { useEffect } from "react";
-
-
 
 const Hero: FC = () => {
   const [titleScope, titleAnimate] = useAnimate();
@@ -22,23 +26,22 @@ const Hero: FC = () => {
   const protraitWidth = useTransform(scrollYProgress, [0, 1], ["100%", "240%"]);
 
   useEffect(() => {
-
     new SplitType(titleScope.current, {
       types: "lines,words",
       tagName: "span",
     });
 
-    titleAnimate(titleScope.current.querySelectorAll(".word"),
+    titleAnimate(
+      titleScope.current.querySelectorAll(".word"),
       {
         transform: "translateY(0)",
-      }, {
-      duration: 0.5,
-      delay: stagger(0.1),
-    });
-
+      },
+      {
+        duration: 0.5,
+        delay: stagger(0.1),
+      },
+    );
   }, []);
-
-
 
   return (
     <section>
@@ -51,7 +54,8 @@ const Hero: FC = () => {
               className="text-5xl md:text-6xl mt-40 md:mt-0 lg:text-7xl"
               ref={titleScope}
             >
-              Living with regret is harder — it whispers in the quiet, long after the storm is gone.
+              Living with regret is harder — it whispers in the quiet, long
+              after the storm is gone.
             </motion.h1>
             <div className="flex flex-col mt-10 items-start gap-6 md:flex-row md:items-center">
               <motion.div
@@ -59,46 +63,75 @@ const Hero: FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 1.75 }}
               >
-                <Button variant="secondary" iconAfter={
-                  <div className="overflow-hidden size-5">
-                    <div className="h-5 w-10 flex group-hover/button:-translate-x-1/2 transition-transform duration-500">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-5">
-                        <path strokeLinecap="round"
-                          strokeLinejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
-                      </svg>
+                <Button
+                  variant="secondary"
+                  iconAfter={
+                    <div className="overflow-hidden size-5">
+                      <div className="h-5 w-10 flex group-hover/button:-translate-x-1/2 transition-transform duration-500">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth="1.5"
+                          stroke="currentColor"
+                          className="size-5"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"
+                          />
+                        </svg>
 
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-5">
-                        <path strokeLinecap="round"
-                          strokeLinejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
-                      </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth="1.5"
+                          stroke="currentColor"
+                          className="size-5"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"
+                          />
+                        </svg>
+                      </div>
                     </div>
-                  </div>
-                }>
-                  <span>
-                    View My Work
-                  </span>
+                  }
+                >
+                  <span>View My Work</span>
                 </Button>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: "100%" }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 2.5 }}>
+                transition={{ duration: 0.5, delay: 2.5 }}
+              >
                 <Button variant="text">Let&apos;s talk</Button>
               </motion.div>
             </div>
           </div>
         </div>
         <div className="md:col-span-5 relative">
-          <motion.div className="mt-20 md:mt-0 md:size-full md:absolute md:right-0 max-md:!w-full" style={{
-            width: protraitWidth,
-          }}>
-            <Image src={heroImage} alt="hero image" className="size-full object-cover" />
+          <motion.div
+            className="mt-20 md:mt-0 md:size-full md:absolute md:right-0 max-md:!w-full"
+            style={{
+              width: protraitWidth,
+            }}
+          >
+            <Image
+              src={heroImage}
+              alt="hero image"
+              className="size-full object-cover"
+            />
           </motion.div>
         </div>
       </div>
       <div className="md:h-[200vh]" ref={scrollingDiv}></div>
-    </section >
-  )
+    </section>
+  );
 };
 
 export default Hero;
