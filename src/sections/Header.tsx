@@ -61,7 +61,7 @@ const Header: FC = () => {
       navAnimate(
         navScope.current,
         {
-          height: "110dvh",
+          height: "100dvh",
         },
         {
           duration: 0.7,
@@ -91,7 +91,7 @@ const Header: FC = () => {
       navAnimate(
         navScope.current,
         {
-          height: 0,
+          height: "0dvh",
         },
         {
           duration: 0.7,
@@ -162,7 +162,7 @@ const Header: FC = () => {
           ))}
         </nav>
       </div>
-      <div className="fixed top-0 left-0 w-full mix-blend-difference backdrop-blur-md z-10">
+      <div className="fixed top-0 left-0 w-full mix-blend-difference backdrop-blur-md! z-10">
         <nav className="container max-w-full">
           <div className="flex justify-between items-center h-20">
             <div>
