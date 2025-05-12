@@ -1,29 +1,24 @@
 /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
-import image1 from "@/assets/images/project-1.jpg";
-import image2 from "@/assets/images/project-2.jpg";
-import image3 from "@/assets/images/project-3.jpg";
-import image4 from "@/assets/images/project-4.jpg";
-import image5 from "@/assets/images/project-5.jpg";
+import image1 from "@/assets/images/moblie-app.png";
+import image2 from "@/assets/images/e-commerce.png";
+import image3 from "@/assets/images/pofo.png";
+import image4 from "@/assets/images/web-design.png";
 
 export const projects = [
   {
-    name: "Artisan Brew Co.",
+    name: "Mobllie App",
     image: image1,
   },
   {
-    name: "Wavelength Studios",
+    name: "E-commerce",
     image: image2,
   },
   {
-    name: "Nova Fitness",
+    name: "Peronal Portfolio",
     image: image3,
   },
   {
-    name: "Urban Plates",
+    name: "Web Design",
     image: image4,
-  },
-  {
-    name: "Bloom Botanicals",
-    image: image5,
   },
 ];

@@ -1,8 +1,7 @@
 "use client";
 import { FC, useRef } from "react";
 /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
-import heroImage from "@/assets/images/QQ1.jpg";
-import downImage from "@/assets/icons/chevron-double-down.svg";
+import heroImage from "@/assets/images/hero.jpg";
 import { Button } from "@/components/Button";
 import Image from "next/image";
 import SplitType from "split-type";
