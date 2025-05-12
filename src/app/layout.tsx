@@ -10,8 +10,11 @@ const archivo = Archivo({
 });
 
 export const metadata: Metadata = {
-  title: "Minimal Single Page Portfolio",
+  title: "Eddy Portfolio",
   description: "Created with Frontend Tribe",
+  icons: {
+    icon: "/arrow-right.svg",
+  },
 };
 
 export default function RootLayout({
