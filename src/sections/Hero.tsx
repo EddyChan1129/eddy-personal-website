@@ -1,21 +1,18 @@
 "use client";
 import { FC, useRef } from "react";
-/* eslint-disable-next-line @typescript-eslint/no-unused-vars */
 import heroImage from "@/assets/images/hero.jpg";
 import { Button } from "@/components/Button";
 import Image from "next/image";
-import SplitType from "split-type";
 import {
-  useAnimate,
   motion,
-  stagger,
   useScroll,
   useTransform,
 } from "motion/react";
 import { useEffect } from "react";
+import useTextRevealAnimation from "@/hooks/useTextRevealAnimation";
 
 const Hero: FC = () => {
-  const [titleScope, titleAnimate] = useAnimate();
+
   const scrollingDiv = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: scrollingDiv,
@@ -24,23 +21,11 @@ const Hero: FC = () => {
 
   const protraitWidth = useTransform(scrollYProgress, [0, 1], ["100%", "240%"]);
 
-  useEffect(() => {
-    new SplitType(titleScope.current, {
-      types: "lines,words",
-      tagName: "span",
-    });
+  const { scope, entranceAnimation } = useTextRevealAnimation();
 
-    titleAnimate(
-      titleScope.current.querySelectorAll(".word"),
-      {
-        transform: "translateY(0)",
-      },
-      {
-        duration: 0.5,
-        delay: stagger(0.1),
-      },
-    );
-  }, []);
+  useEffect(() => {
+    entranceAnimation();
+  }, [entranceAnimation]);
 
   return (
     <section>
@@ -51,7 +36,7 @@ const Hero: FC = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               className="text-5xl md:text-6xl mt-40 md:mt-0 lg:text-7xl"
-              ref={titleScope}
+              ref={scope}
             >
               Living with regret is harder — it whispers in the quiet, long
               after the storm is gone.

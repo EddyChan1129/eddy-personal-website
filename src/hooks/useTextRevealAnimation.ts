@@ -20,8 +20,23 @@ const useTextRevealAnimation = () => {
         transform: ["translateY(0)"],
       },
       {
-        duration: 0.5,
-        delay: stagger(0.2),
+        duration: 0.3,
+        delay: stagger(0.025),
+      },
+    );
+  };
+
+  const exitAnimation = () => {
+    return animate(
+      scope.current.querySelectorAll(".word"),
+      {
+        transform: ["translateY(100%)"],
+      },
+      {
+        duration: 0.3,
+        delay: stagger(-0.025, {
+          startDelay: scope.current.querySelectorAll(".word").length * 0.025,
+        }),
       },
     );
   };
@@ -29,6 +44,7 @@ const useTextRevealAnimation = () => {
   return {
     scope,
     entranceAnimation,
+    exitAnimation,
   };
 };
 

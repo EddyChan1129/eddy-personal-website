@@ -3,8 +3,7 @@ import React, { HTMLAttributes, useEffect } from "react";
 import Image from "next/image";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { twMerge } from "tailwind-merge";
-import SplitType from "split-type";
-import { useAnimate } from "motion/react";
+import { usePresence, motion } from "motion/react";
 import useTextRevealAnimation from "@/hooks/useTextRevealAnimation";
 
 const Testimonial = (
@@ -29,30 +28,55 @@ const Testimonial = (
     ...rest
   } = props;
 
-  const { scope: quoteScope, entranceAnimation: quoteAnimate } =
-    useTextRevealAnimation();
-  // const [quoteScope, quoteAnimate] = useAnimate()
-  // const [citeScope, citeAnimate] = useAnimate()
-  const { scope: citeScope, entranceAnimation: citeAnimate } =
-    useTextRevealAnimation();
+  const {
+    scope: quoteScope,
+    entranceAnimation: quoteEntranceAnimate,
+    exitAnimation: quoteExitAnimate,
+  } = useTextRevealAnimation();
+
+  const [isPresent, safeToRemove] = usePresence();
+  const [isMounted, setIsMounted] = React.useState(false);
+  const {
+    scope: citeScope,
+    entranceAnimation: citeEntranceAnimate,
+    exitAnimation: citeExitAnimate,
+  } = useTextRevealAnimation();
 
   useEffect(() => {
-    quoteAnimate();
-    citeAnimate();
-  }, []);
+    if (isPresent) {
+      quoteEntranceAnimate().then(() => {
+        citeEntranceAnimate();
+      });
+    } else {
+      Promise.all([quoteExitAnimate(), citeExitAnimate()]).then(() => {
+        safeToRemove();
+      });
+    }
+  }, [
+    isPresent,
+    safeToRemove,
+    quoteEntranceAnimate,
+    quoteExitAnimate,
+    citeEntranceAnimate,
+    citeExitAnimate,
+  ]);
 
   return (
     <div
       className={twMerge(
-        "grid md:grid-cols-5 md:gap-8 lg:gap-16 md:items-center",
+        "grid md:grid-cols-5 md:gap-8 lg:gap-16 md:items-center relative",
         className,
       )}
       {...rest}
     >
-      <div
-        className="aspect-square 
-                    md:aspect-[9/16] md:col-span-2"
-      >
+      <div className="aspect-square md:aspect-[9/16] md:col-span-2 ">
+        <motion.div
+          className="absolute h-full bg-stone-900"
+          initial={{ width: "100%" }}
+          animate={{ width: "0%" }}
+          exit={{ width: "100%" }}
+          transition={{ duration: 0.5 }}
+        ></motion.div>
         <Image
           src={image}
           alt={`${name} image`}
