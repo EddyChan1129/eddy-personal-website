@@ -3,16 +3,11 @@ import { FC, useRef } from "react";
 import heroImage from "@/assets/images/hero.jpg";
 import { Button } from "@/components/Button";
 import Image from "next/image";
-import {
-  motion,
-  useScroll,
-  useTransform,
-} from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
 import { useEffect } from "react";
 import useTextRevealAnimation from "@/hooks/useTextRevealAnimation";
 
 const Hero: FC = () => {
-
   const scrollingDiv = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: scrollingDiv,
