@@ -30,11 +30,10 @@ const Hero: FC = () => {
             <motion.h1
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="text-5xl md:text-6xl mt-40 md:mt-0 lg:text-7xl"
+                className="text-4xl leading-snug md:text-6xl mt-20 md:mt-0 lg:text-7xl"
               ref={scope}
             >
-              Living with regret is harder — it whispers in the quiet, long
-              after the storm is gone.
+              Living with regret is harder — it whispers in the quiet, long after the storm is gone.
             </motion.h1>
             <div className="flex flex-col mt-10 items-start gap-6 md:flex-row md:items-center">
               <motion.div

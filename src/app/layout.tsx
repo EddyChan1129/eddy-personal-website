@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Eddy Portfolio",
   description: "Created with Frontend Tribe",
   icons: {
-    icon: "/arrow-right.svg",
+    icon: "/test.svg",
   },
 };
 

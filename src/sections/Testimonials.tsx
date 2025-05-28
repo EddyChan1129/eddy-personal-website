@@ -1,39 +1,38 @@
 "use client";
 import { FC, useRef, useState } from "react";
-import image1 from "@/assets/images/testimonial-1.jpg";
-import image2 from "@/assets/images/testimonial-2.jpg";
-import image3 from "@/assets/images/testimonial-3.jpg";
+import image1 from "@/assets/images/image1.png";
+import image2 from "@/assets/images/image2.png";
+import image3 from "@/assets/images/image3.png";
 import { useScroll, motion, useTransform, AnimatePresence } from "motion/react";
 import Testimonial from "@/components/Testimonial";
 
 /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
 const testimonials = [
   {
-    name: "Sarah Chen",
-    company: "Pixel Perfect",
-    role: "Head of Design",
-    quote:
-      "Alex's expertise in both technical development and design created a beautiful, high-performing website.",
+    name: "Tims Wong",
+    company: "My Bagel",
+    role: "Founder & Developer",
+    quote: "Working with clients to create intuitive and delightful web experiences is what I do best. My Bagel's success is a testament to that passion.",
     image: image1,
-    imagePositionY: 0.2,
+    imagePositionY: 0.3,
   },
   {
-    name: "Marcus Rodriguez",
-    company: "Craft Coffee Co.",
-    role: "Founder",
+    name: "Jessica Wong",
+    company: "Freelance Client",
+    role: "Content Creator",
     quote:
-      "Alex transformed our boutique coffee brand with a website that perfectly balances aesthetics and functionality.",
+      "Eddy built my personal website exactly how I envisioned it — clean, fast, and beautifully responsive. He made the process simple and stress-free, even for someone with no tech background like me.",
     image: image2,
-    imagePositionY: 0.1,
+    imagePositionY: 0.25,
   },
   {
-    name: "Emily Watson",
-    company: "Studio Minimal",
-    role: "Creative Director",
-    quote:
-      "The collaborative process was amazing. Alex brought lots of fresh perspectives and innovative solutions.",
-    image: image3,
-    imagePositionY: 0.55,
+    name: "William Leung",
+  company: "SmartPath Tutoring",
+  role: "Founder",
+  quote:
+    "Eddy did an outstanding job building our tutoring agency platform. The interface is user-friendly for both parents and tutors, and the backend system handles bookings and profiles seamlessly.",
+  image: image3,
+  imagePositionY: 0.3,
   },
 ];
 
@@ -72,13 +71,13 @@ const Testimonials: FC = () => {
         ref={titleRef}
       >
         <motion.span className="whitespace-nowrap" style={{ x: transformTop }}>
-          Some nice words from my past clients
+          Feedback from people I’ve helped build online platforms
         </motion.span>
         <motion.span
           className="whitespace-nowrap self-end text-red-orange-500"
           style={{ x: transformBottom }}
         >
-          Some nice words from my past clients
+          Feedback from people I’ve helped build online platforms
         </motion.span>
       </h2>
       <div className="container">

@@ -14,7 +14,7 @@ export const projects = [
     image: image2,
   },
   {
-    name: "Peronal Portfolio",
+    name: "Portfolio",
     image: image3,
   },
   {
