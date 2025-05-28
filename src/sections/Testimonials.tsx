@@ -12,7 +12,8 @@ const testimonials = [
     name: "Tims Wong",
     company: "My Bagel",
     role: "Founder & Developer",
-    quote: "Working with clients to create intuitive and delightful web experiences is what I do best. My Bagel's success is a testament to that passion.",
+    quote:
+      "Working with clients to create intuitive and delightful web experiences is what I do best.",
     image: image1,
     imagePositionY: 0.3,
   },
@@ -21,18 +22,18 @@ const testimonials = [
     company: "Freelance Client",
     role: "Content Creator",
     quote:
-      "Eddy built my personal website exactly how I envisioned it — clean, fast, and beautifully responsive. He made the process simple and stress-free, even for someone with no tech background like me.",
+      "Eddy built my personal website exactly how I envisioned it — clean, fast, and beautifully responsive.",
     image: image2,
     imagePositionY: 0.25,
   },
   {
     name: "William Leung",
-  company: "SmartPath Tutoring",
-  role: "Founder",
-  quote:
-    "Eddy did an outstanding job building our tutoring agency platform. The interface is user-friendly for both parents and tutors, and the backend system handles bookings and profiles seamlessly.",
-  image: image3,
-  imagePositionY: 0.3,
+    company: "SmartPath Tutoring",
+    role: "Founder",
+    quote:
+      "Eddy did an outstanding job building our tutoring agency platform. The interface is user-friendly for both parents and tutors.",
+    image: image3,
+    imagePositionY: 0.3,
   },
 ];
 

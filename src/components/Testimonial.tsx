@@ -88,17 +88,15 @@ const Testimonial = (
       </div>
       <blockquote className="md:col-span-3">
         <div
-          className="text-3xl md:text-5xl lg:text-6xl mt-8 md:mt-0"
+          className="text-2xl md:text-5xl lg:text-6xl mt-8 md:mt-0"
           ref={quoteScope}
         >
-          <span>&ldquo;</span>
-          {quote}
-          <span>&ldquo;</span>
+          <span>&ldquo;{quote}&ldquo;</span>
         </div>
 
         <cite
           ref={citeScope}
-          className="mt-4 md:mt-8  not-italic md:text-lg lg:text-xl block "
+          className="mt-4 md:mt-8  not-italic md:text-lg text-sm lg:text-xl block "
         >
           {name}, {role} at {company}
         </cite>

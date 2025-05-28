@@ -15,14 +15,14 @@ const Intro: FC = () => {
   }, [inView, entranceAnimation]);
 
   return (
-    <section
-      className="section md:mt-16 lg:mt-20 "
-      id="intro"
-      ref={sectionRef}
-    >
+    <section className="section md:mt-16 lg:mt-20 " id="intro" ref={sectionRef}>
       <div className="container">
-        <h2 className="text-4xl leading-snug md:text-7xl lg:w-[80%]  border-b-red-orange-500 border-b-2  mx-auto pb-10" ref={scope}>
-          I’m <b className="text-red-orange-500">Eddy</b>. My goal is to create products that enhance the user experience and drive business success.
+        <h2
+          className="text-4xl leading-snug md:text-7xl lg:w-[80%]  border-b-red-orange-500 border-b-2  mx-auto pb-10"
+          ref={scope}
+        >
+          I’m <b className="text-red-orange-500">Eddy</b>. My goal is to create
+          products that enhance the user experience and drive business success.
         </h2>
       </div>
     </section>

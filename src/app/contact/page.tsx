@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import { z } from "zod"
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -12,15 +12,17 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 
 const ContactSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   email: z.string().email({ message: "Invalid email address." }),
-  message: z.string().min(5, { message: "Message must be at least 5 characters." }),
-})
+  message: z
+    .string()
+    .min(5, { message: "Message must be at least 5 characters." }),
+});
 
 export default function ContactForm() {
   const form = useForm<z.infer<typeof ContactSchema>>({
@@ -30,10 +32,10 @@ export default function ContactForm() {
       email: "",
       message: "",
     },
-  })
+  });
 
   function onSubmit(data: z.infer<typeof ContactSchema>) {
-    alert("Form submitted successfully!")
+    alert("Form submitted successfully!");
   }
 
   return (
@@ -61,7 +63,11 @@ export default function ContactForm() {
               <FormItem>
                 <FormLabel>Client Email</FormLabel>
                 <FormControl>
-                  <Input type="email" placeholder="Enter your email" {...field} />
+                  <Input
+                    type="email"
+                    placeholder="Enter your email"
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -74,15 +80,21 @@ export default function ContactForm() {
               <FormItem>
                 <FormLabel>Message</FormLabel>
                 <FormControl>
-                  <Textarea placeholder="Write your message here..." rows={5} {...field} />
+                  <Textarea
+                    placeholder="Write your message here..."
+                    rows={5}
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
-          <Button type="submit" className="w-full">Send</Button>
+          <Button type="submit" className="w-full">
+            Send
+          </Button>
         </form>
       </Form>
     </div>
-  )
+  );
 }

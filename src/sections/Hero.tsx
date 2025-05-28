@@ -30,10 +30,11 @@ const Hero: FC = () => {
             <motion.h1
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-                className="text-4xl leading-snug md:text-6xl mt-20 md:mt-0 lg:text-7xl"
+              className="text-4xl leading-snug md:text-6xl mt-32 md:mt-0 lg:text-7xl"
               ref={scope}
             >
-              Living with regret is harder — it whispers in the quiet, long after the storm is gone.
+              Living with regret is harder — it whispers in the quiet, long
+              after the storm is gone.
             </motion.h1>
             <div className="flex flex-col mt-10 items-start gap-6 md:flex-row md:items-center">
               <motion.div
@@ -41,46 +42,48 @@ const Hero: FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 1.75 }}
               >
-                <Button
-                  variant="secondary"
-                  iconAfter={
-                    <div className="overflow-hidden size-5">
-                      <div className="h-5 w-10 flex group-hover/button:-translate-x-1/2 transition-transform duration-500">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          strokeWidth="1.5"
-                          stroke="currentColor"
-                          className="size-5"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"
-                          />
-                        </svg>
+                <a href="#projects">
+                  <Button
+                    variant="secondary"
+                    iconAfter={
+                      <div className="overflow-hidden size-5">
+                        <div className="h-5 w-10 flex group-hover/button:-translate-x-1/2 transition-transform duration-500">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth="1.5"
+                            stroke="currentColor"
+                            className="size-5"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"
+                            />
+                          </svg>
 
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          strokeWidth="1.5"
-                          stroke="currentColor"
-                          className="size-5"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"
-                          />
-                        </svg>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth="1.5"
+                            stroke="currentColor"
+                            className="size-5"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"
+                            />
+                          </svg>
+                        </div>
                       </div>
-                    </div>
-                  }
-                >
-                  <span>View My Work</span>
-                </Button>
+                    }
+                  >
+                    <span>View My Work</span>
+                  </Button>
+                </a>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: "100%" }}
