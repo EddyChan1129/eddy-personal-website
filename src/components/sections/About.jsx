@@ -2,12 +2,16 @@ import { RevealOnScroll } from "../RevealOnScroll";
 
 export const About = () => {
   const frontendSkills = [
+    "HTML",
+    "CSS",
+    "bootstrap",
+    "TailwindCSS",
+    "JavaScript",
+    "TypeScript",
     "React",
     "NextJS",
     "Vue",
     "NuxtJS",
-    "TypeScript",
-    "TailwindCSS",
   ];
 
   const backendSkills = [
@@ -18,13 +22,15 @@ export const About = () => {
     "MySQL",
     "MongoDB",
     "GraphQL",
+    "Express",
+    "Spring Boot",
   ];
 
   // Mobile skills can be added similarly
   const mobileSkills = ["Swift", "Kotlin", "React Native"];
 
   // Tools and DevOps skills can be added similarly
-  const devOpsSkills = ["Docker", "Git", "CI/CD", "Vercel", "Netlify", "AWS"];
+  const devOpsSkills = ["Docker", "Git", "CI/CD", "Vercel", "Netlify", "AWS", "Google Cloud"];
   return (
     <section
       id="about"
@@ -105,77 +111,6 @@ export const About = () => {
                       {tech}
                     </span>
                   ))}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-            <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
-              <h3 className="text-xl font-bold mb-4">🎓 Education</h3>
-              <div className="text-gray-300 space-y-4">
-                <div>
-                  <p className="font-semibold">
-                    Postgraduate Certificate – Mobile Application Development
-                  </p>
-                  <p>George Brown College, Toronto, ON</p>
-                  <p className="text-sm italic">
-                    Expected Completion: Dec 2025
-                  </p>
-                  <ul className="list-disc list-inside mt-2 space-y-1 text-sm">
-                    <li>
-                      <strong>E-Commerce App:</strong> Full-stack shopping
-                      platform using Node.js & MongoDB
-                    </li>
-                    <li>
-                      <strong>Mobile App Design:</strong> UI prototyping and
-                      implementation using Kotlin, Swift & Firebase
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <p className="font-semibold">
-                    Bachelor of Science in Computing
-                  </p>
-                  <p>The Hong Kong Polytechnic University, Hong Kong</p>
-                  <ul className="list-disc list-inside mt-2 space-y-1 text-sm">
-                    <li>
-                      <strong>Full-stack Web App:</strong> Business dashboard
-                      using PHP, JavaScript & MySQL
-                    </li>
-                    <li>
-                      <strong>E-commerce System:</strong> Shopping cart with
-                      order management & user authentication
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
-              <h3 className="text-xl font-bold mb-4">💼 Work Experience</h3>
-              <div className="space-y-4 text-gray-300">
-                <div>
-                  <h4 className="font-semibold">
-                    Frontend Developer – GBC Capstone Project (2025)
-                  </h4>
-                  <p>
-                    Built a responsive e-commerce app using Next.js, Tailwind
-                    CSS, Firebase, and Stripe. Integrated admin panel and
-                    real-time product management.
-                  </p>
-                </div>
-
-                <div>
-                  <h4 className="font-semibold">
-                    Freelance Web Developer (2024)
-                  </h4>
-                  <p>
-                    Designed and deployed client websites with custom features
-                    using React and Firebase. Focused on SEO and responsive
-                    design.
-                  </p>
                 </div>
               </div>
             </div>

@@ -14,10 +14,10 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
           </a>
 
           <div
-            className="w-7 h-5 relative cursor-pointer z-40 md:hidden"
+            className="w-7 h-5 relative cursor-pointer z-40 md:hidden flex items-center justify-center hover:text-white transition-colors"
             onClick={() => setMenuOpen((prev) => !prev)}
           >
-            &#9776;
+            <b className="text-3xl">&#9776;</b>
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
@@ -34,6 +34,13 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
             >
               {" "}
               About{" "}
+            </a>
+            <a
+              href="#background"
+              className="text-gray-300 hove:text-white transition-colors"
+            >
+              {" "}
+              Background{" "}
             </a>
             <a
               href="#projects"
