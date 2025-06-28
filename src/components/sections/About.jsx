@@ -30,7 +30,15 @@ export const About = () => {
   const mobileSkills = ["Swift", "Kotlin", "React Native"];
 
   // Tools and DevOps skills can be added similarly
-  const devOpsSkills = ["Docker", "Git", "CI/CD", "Vercel", "Netlify", "AWS", "Google Cloud"];
+  const devOpsSkills = [
+    "Docker",
+    "Git",
+    "CI/CD",
+    "Vercel",
+    "Netlify",
+    "AWS",
+    "Google Cloud",
+  ];
   return (
     <section
       id="about"
