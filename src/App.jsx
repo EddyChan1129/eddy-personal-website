@@ -9,6 +9,8 @@ import { Projects } from "./components/sections/Projects";
 import "./index.css";
 import { Contact } from "./components/sections/Contact";
 import { Background } from "./components/sections/Background";
+import { AnimatedBackground } from "./components/AnimatedBackground";
+import { ScrollWrapper } from "./components/ScrollWrapper";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -17,18 +19,29 @@ function App() {
   return (
     <>
       {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}{" "}
+      <AnimatedBackground />
       <div
         className={`min-h-screen transition-opacity duration-700 ${
           isLoaded ? "opacity-100" : "opacity-0"
-        } bg-gray-900 text-gray-100`}
+        } bg-gray-100 text-gray-900`}
       >
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        <Home />
-        {/* <About /> */}
-        <Background />
-        <Projects />
-        <Contact />
+        <ScrollWrapper>
+          <Home />
+        </ScrollWrapper>
+        <ScrollWrapper>
+          <About />
+        </ScrollWrapper>
+        <ScrollWrapper>
+          <Background />
+        </ScrollWrapper>
+        <ScrollWrapper>
+          <Projects />
+        </ScrollWrapper>
+        <ScrollWrapper>
+          <Contact />
+        </ScrollWrapper>
       </div>
     </>
   );

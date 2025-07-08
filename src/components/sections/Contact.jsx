@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { RevealOnScroll } from "../RevealOnScroll";
+
 import emailjs from "emailjs-com";
 
 export const Contact = () => {
@@ -31,7 +31,7 @@ export const Contact = () => {
       id="contact"
       className="min-h-screen flex items-center justify-center py-20"
     >
-      <RevealOnScroll>
+      
         <div className="px-4 w-full min-w-[300px] md:w-[500px] sm:w-2/3 p-6">
           <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
             {" "}
@@ -45,7 +45,7 @@ export const Contact = () => {
                 name="name"
                 required
                 value={formData.name}
-                className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
+                className="w-full bg-white border border-gray-200/80 rounded px-4 py-3 text-gray-800 transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
                 placeholder="Name..."
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
@@ -60,7 +60,7 @@ export const Contact = () => {
                 name="email"
                 required
                 value={formData.email}
-                className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
+                className="w-full bg-white border border-gray-200/80 rounded px-4 py-3 text-gray-800 transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
                 placeholder="example@gmail.com"
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
@@ -75,7 +75,7 @@ export const Contact = () => {
                 required
                 rows={5}
                 value={formData.message}
-                className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
+                className="w-full bg-white border border-gray-200/80 rounded px-4 py-3 text-gray-800 transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
                 placeholder="Your Message..."
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })
@@ -91,7 +91,7 @@ export const Contact = () => {
             </button>
           </form>
         </div>
-      </RevealOnScroll>
+      
     </section>
   );
 };

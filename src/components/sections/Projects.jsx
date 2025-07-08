@@ -1,4 +1,4 @@
-import { RevealOnScroll } from "../RevealOnScroll";
+
 
 export const Projects = () => {
   return (
@@ -6,18 +6,18 @@ export const Projects = () => {
       id="projects"
       className="min-h-screen flex items-center justify-center py-20"
     >
-      <RevealOnScroll>
+      
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
             Recent Projects
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Project 1: My Bagel */}
-            <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition">
-              <h3 className="text-xl font-bold mb-2">
+            <div className="p-6 rounded-xl border border-gray-200/80 hover:-translate-y-1 hover:shadow-lg transition">
+              <h3 className="text-xl font-bold mb-2 text-gray-800">
                 My Bagel – E-Commerce App
               </h3>
-              <p className="text-gray-400 mb-4">
+              <p className="text-gray-600 mb-4">
                 Built a modern bagel store using Next.js and Strapi CMS.
                 Features include real-time product management, Firebase auth,
                 and Cloudinary image uploads.
@@ -52,9 +52,9 @@ export const Projects = () => {
             </div>
 
             {/* Project 2: E-Booking System */}
-            <div className="glass p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_4px_20px_rgba(59,130,246,0.1)] transition-all">
-              <h3 className="text-xl font-bold mb-2">E-Booking System</h3>
-              <p className="text-gray-400 mb-4">
+            <div className="glass p-6 rounded-xl border border-gray-200/80 hover:-translate-y-1 hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold mb-2 text-gray-800">E-Booking System</h3>
+              <p className="text-gray-600 mb-4">
                 A booking system for tutors with Google Calendar sync, built
                 with modern web stack and styled using ShadCN components.
               </p>
@@ -89,9 +89,9 @@ export const Projects = () => {
             </div>
 
             {/* Project 3: TodoList Backend */}
-            <div className="glass p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_4px_20px_rgba(59,130,246,0.1)] transition-all">
-              <h3 className="text-xl font-bold mb-2">TodoList Backend</h3>
-              <p className="text-gray-400 mb-4">
+            <div className="glass p-6 rounded-xl border border-gray-200/80 hover:-translate-y-1 hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold mb-2 text-gray-800">TodoList Backend</h3>
+              <p className="text-gray-600 mb-4">
                 A backend service for managing a todo list, built using Java,
                 Spring Boot, and PostgreSQL. Containerized using Docker for easy
                 deployment.
@@ -121,9 +121,9 @@ export const Projects = () => {
             </div>
 
             {/* Project 4: Mobile – Canada News */}
-            <div className="glass p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_4px_20px_rgba(59,130,246,0.1)] transition-all">
-              <h3 className="text-xl font-bold mb-2">Mobile: Canada News</h3>
-              <p className="text-gray-400 mb-4">
+            <div className="glass p-6 rounded-xl border border-gray-200/80 hover:-translate-y-1 hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold mb-2 text-gray-800">Mobile: Canada News</h3>
+              <p className="text-gray-600 mb-4">
                 A simple React Native mobile app that fetches and displays the
                 latest Canadian news using the NewsData API.
               </p>
@@ -152,7 +152,7 @@ export const Projects = () => {
             </div>
           </div>
         </div>
-      </RevealOnScroll>
+      
     </section>
   );
 };
