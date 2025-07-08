@@ -1,10 +1,8 @@
-
-
 export const About = () => {
   const frontendSkills = [
     "HTML",
     "CSS",
-    "bootstrap",
+    "Bootstrap",
     "TailwindCSS",
     "JavaScript",
     "TypeScript",
@@ -18,7 +16,7 @@ export const About = () => {
     "Node.js",
     "Python",
     "Java",
-    "Php",
+    "PHP",
     "MySQL",
     "MongoDB",
     "GraphQL",
@@ -26,10 +24,8 @@ export const About = () => {
     "Spring Boot",
   ];
 
-  // Mobile skills can be added similarly
   const mobileSkills = ["Swift", "Kotlin", "React Native"];
 
-  // Tools and DevOps skills can be added similarly
   const devOpsSkills = [
     "Docker",
     "Git",
@@ -39,92 +35,53 @@ export const About = () => {
     "AWS",
     "Google Cloud",
   ];
+
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center justify-center py-20"
+      className="min-h-screen flex items-center justify-center py-20 bg-[#f7f9fc]"
     >
-      
-        <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
-            {" "}
-            About Me
-          </h2>
+      <div className="max-w-4xl mx-auto px-6">
+        <h2 className="text-4xl font-semibold text-center mb-10 bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent tracking-tight">
+          About Me
+        </h2>
 
-          <div className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all">
-            <p className="text-gray-300 mb-6">
-              Passionate developer with expertise in building scalable web
-              applications and creating innovative solutions.
-            </p>
+        <div className="rounded-2xl p-8 shadow-xl bg-white/70 backdrop-blur-sm border border-gray-200">
+          <p className="text-[#444] text-lg mb-10 leading-relaxed text-center">
+            I’m a developer passionate about crafting intuitive, scalable web
+            and mobile apps. I enjoy solving real-world problems with elegant
+            code and clean design.
+          </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
-                <h3 className="text-xl font-bold mb-4"> Frontend</h3>
-                <div className="flex flex-wrap gap-2">
-                  {frontendSkills.map((tech, key) => (
-                    <span
-                      key={key}
-                      className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 
-                                    hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition
-                    "
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
-                <h3 className="text-xl font-bold mb-4"> Backend</h3>
-                <div className="flex flex-wrap gap-2">
-                  {backendSkills.map((tech, key) => (
-                    <span
-                      key={key}
-                      className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 
-                                    hover:shadow-[0_2px_8px_rgba(59,130,2246,0.2)] transition
-                    "
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
-                <h3 className="text-xl font-bold mb-4"> Mobile </h3>
-                <div className="flex flex-wrap gap-2">
-                  {mobileSkills.map((tech, key) => (
-                    <span
-                      key={key}
-                      className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 
-                                    hover:shadow-[0_2px_8px_rgba(59,130,2246,0.2)] transition
-                    "
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
-                <h3 className="text-xl font-bold mb-4">Tools and DevOps</h3>
-                <div className="flex flex-wrap gap-2">
-                  {devOpsSkills.map((tech, key) => (
-                    <span
-                      key={key}
-                      className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 
-                                    hover:shadow-[0_2px_8px_rgba(59,130,2246,0.2)] transition
-                    "
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Frontend */}
+            <SkillCard title="Frontend" skills={frontendSkills} />
+            {/* Backend */}
+            <SkillCard title="Backend" skills={backendSkills} />
+            {/* Mobile */}
+            <SkillCard title="Mobile" skills={mobileSkills} />
+            {/* DevOps */}
+            <SkillCard title="Tools & DevOps" skills={devOpsSkills} />
           </div>
         </div>
-      
+      </div>
     </section>
   );
 };
+
+// ⬇ 可獨立寫出去 component 檔
+const SkillCard = ({ title, skills }) => (
+  <div className="rounded-xl p-6 bg-white/80 border border-gray-200 hover:shadow-md transition">
+    <h3 className="text-lg font-semibold mb-4 text-[#1a1a1a]">{title}</h3>
+    <div className="flex flex-wrap gap-2">
+      {skills.map((tech, key) => (
+        <span
+          key={key}
+          className="bg-blue-100 text-blue-800 py-1 px-3 rounded-full text-sm hover:bg-blue-200 transition"
+        >
+          {tech}
+        </span>
+      ))}
+    </div>
+  </div>
+);
