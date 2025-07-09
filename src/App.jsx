@@ -27,21 +27,11 @@ function App() {
       >
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        <ScrollWrapper>
           <Home />
-        </ScrollWrapper>
-        <ScrollWrapper>
           <About />
-        </ScrollWrapper>
-        <ScrollWrapper>
           <Background />
-        </ScrollWrapper>
-        <ScrollWrapper>
           <Projects />
-        </ScrollWrapper>
-        <ScrollWrapper>
           <Contact />
-        </ScrollWrapper>
       </div>
     </>
   );
