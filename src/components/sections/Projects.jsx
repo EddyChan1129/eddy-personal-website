@@ -1,18 +1,21 @@
+import BackgroundEffect from "../BackgroundEffect";
 import Marquee from "../Marquee";
 
 export const Projects = () => {
   return (
     <section
       id="projects"
-      className="min-h-screen flex items-center justify-center py-20 bg-[#f7f9fc]"
+      className="min-h-screen flex items-center justify-center py-20 bg-[#f7f9fc] relative bg-gradient-to-b from-[#d9f0ff] via-[#e8f4ff] to-[#f7f9fc] 
+             bg-cover bg-center"
     >
       <div className="max-w-5xl mx-auto px-4">
         <h2 className="text-4xl font-semibold text-center mb-12 bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent tracking-tight">
           Recent Projects
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
           {/* Project 1 */}
+
           <ProjectCard
             title="My Bagel – E-Commerce App"
             description="Built a modern bagel store using Next.js and Strapi CMS. Features include real-time product management, Firebase auth, and Cloudinary image uploads."
@@ -60,6 +63,7 @@ export const Projects = () => {
           />
         </div>
       </div>
+      <BackgroundEffect />
     </section>
   );
 };

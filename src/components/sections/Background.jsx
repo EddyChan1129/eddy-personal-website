@@ -1,9 +1,13 @@
+import BackgroundEffect from "../BackgroundEffect";
+
 export const Background = () => {
   return (
     <section
       id="background"
-      className="min-h-screen flex items-center justify-center py-20 bg-[#f7f9fc]"
+      className="min-h-screen flex items-center justify-center py-20 bg-[#f7f9fc] relative bg-gradient-to-b from-[#f7f9fc] via-[#e8f4ff] to-[#d9f0ff] 
+             bg-cover bg-center"
     >
+      <BackgroundEffect />
       <div className="max-w-5xl mx-auto px-6">
         <h2 className="text-4xl font-semibold text-center mb-12 bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent tracking-tight">
           Background

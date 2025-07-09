@@ -1,5 +1,6 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
+import BackgroundEffect from "../BackgroundEffect";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -28,8 +29,10 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-screen flex items-center justify-center py-20 bg-[#f7f9fc]"
+      className="min-h-screen flex items-center justify-center py-20 bg-[#f7f9fc] relative bg-gradient-to-b from-[#f7f9fc] via-[#e8f4ff] to-[#d9f0ff] 
+             bg-cover bg-center"
     >
+      <BackgroundEffect />
       <div className="w-full max-w-xl px-6">
         <h2 className="text-4xl font-semibold text-center mb-10 bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent tracking-tight">
           Leave Your Message

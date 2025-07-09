@@ -1,3 +1,4 @@
+import BackgroundEffect from "../BackgroundEffect";
 import { SkillCard } from "../SkillCard";
 export const About = () => {
   const frontendSkills = [
@@ -44,18 +45,7 @@ export const About = () => {
       bg-gradient-to-b from-[#d9f0ff] via-[#e8f4ff] to-[#f7f9fc] 
              bg-cover bg-center"
     >
-      <div className="box">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
+      <BackgroundEffect />
 
       <div className="max-w-4xl mx-auto px-6">
         <h2 className="text-4xl font-semibold text-center mb-10 bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent tracking-tight">
