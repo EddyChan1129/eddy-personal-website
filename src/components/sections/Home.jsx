@@ -2,9 +2,22 @@ export const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative bg-[#f7f9fc] bg-cover bg-center "
-      style={{ backgroundImage: "url('/bg_1.png')" }}
+      className="min-h-screen flex items-center justify-center relative 
+             bg-gradient-to-b from-[#f7f9fc] via-[#e8f4ff] to-[#d9f0ff] 
+             bg-cover bg-center"
     >
+      <div className="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
       <div className="text-center z-10 px-6">
         <h1 className="text-4xl md:text-6xl font-semibold mb-6 bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent tracking-tight">
           Hi, I’m Eddy CHAN

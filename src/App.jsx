@@ -10,7 +10,6 @@ import "./index.css";
 import { Contact } from "./components/sections/Contact";
 import { Background } from "./components/sections/Background";
 import { AnimatedBackground } from "./components/AnimatedBackground";
-import { ScrollWrapper } from "./components/ScrollWrapper";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -27,11 +26,11 @@ function App() {
       >
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-          <Home />
-          <About />
-          <Background />
-          <Projects />
-          <Contact />
+        <Home />
+        <About />
+        <Background />
+        <Projects />
+        <Contact />
       </div>
     </>
   );

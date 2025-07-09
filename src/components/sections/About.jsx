@@ -40,14 +40,29 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center justify-center py-20 bg-[#f7f9fc]"
+      className="min-h-screen flex items-center justify-center py-20  relative
+      bg-gradient-to-b from-[#d9f0ff] via-[#e8f4ff] to-[#f7f9fc] 
+             bg-cover bg-center"
     >
+      <div className="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
       <div className="max-w-4xl mx-auto px-6">
         <h2 className="text-4xl font-semibold text-center mb-10 bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent tracking-tight">
           About Me
         </h2>
 
-        <div className="rounded-2xl p-8 shadow-xl bg-white/70 backdrop-blur-sm border border-gray-200">
+        <div className="rounded-2xl p-8 shadow-xl backdrop-blur-sm border border-gray-200">
           <p className="text-[#444] text-lg mb-10 leading-relaxed text-center">
             I’m a developer passionate about crafting intuitive, scalable web
             and mobile apps. I enjoy solving real-world problems with elegant
